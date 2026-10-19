@@ -1,0 +1,15 @@
+export const ipcChannels = {
+  bootstrap: 'multi-idle:bootstrap',
+  createProfile: 'multi-idle:create-profile',
+  startSession: 'multi-idle:start-session',
+  stopSession: 'multi-idle:stop-session',
+  showSession: 'multi-idle:show-session',
+  hideSession: 'multi-idle:hide-session',
+  navigate: 'multi-idle:navigate',
+  goBack: 'multi-idle:go-back',
+  goForward: 'multi-idle:go-forward',
+  reload: 'multi-idle:reload',
+  setViewBounds: 'multi-idle:set-view-bounds',
+  setShellOverlay: 'multi-idle:set-shell-overlay',
+  snapshot: 'multi-idle:snapshot',
+} as const

@@ -1,0 +1,24 @@
+{
+  "name": "multi-idle",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace @multi-idle/contracts && npm run build --workspace @multi-idle/desktop",
+    "dev": "npm run build --workspace @multi-idle/contracts && npm run dev --workspace @multi-idle/desktop",
+    "lint": "oxlint apps packages --deny-warnings",
+    "start": "npm run build && npm run start --workspace @multi-idle/desktop",
+    "test": "npm run test --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present"
+  },
+  "engines": {
+    "node": ">=24.0.0",
+    "npm": ">=11.0.0"
+  },
+  "devDependencies": {
+    "oxlint": "1.79.0"
+  }
+}
