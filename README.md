@@ -16,7 +16,7 @@ The desktop repository uses node:sqlite for workspace/profile definitions. Brows
 
 ## Getting started
 
-Node.js >=24 and npm >=11. Run npm ci --ignore-scripts, npm run build --workspace @multi-idle/contracts, npm test, npm run typecheck and npm run lint. Electron runtime setup is a separate step before npm start.
+Node.js >=24 and npm >=11. Run `npm ci --ignore-scripts`, `npm run build`, `npm test`, `npm run typecheck` and `npm run lint`. Electron runtime setup is a separate step before npm start.
 
 ## How it works
 
@@ -27,6 +27,18 @@ React renderer → shared contracts and desktop bridge → workspace repository 
 ## Current limitations
 
 Unit tests and type/lint checks do not establish that a packaged Windows application or every Electron session flow works. Electron installation scripts were disabled during dependency installation.
+
+## Validation
+
+Node.js 24.15.0 on Windows: production build, seven unit tests, type checks and lint passed after a fresh dependency install with lifecycle scripts disabled. A packaged Electron application was not launched.
+
+```console
+npm ci --ignore-scripts
+npm run build
+npm test
+npm run typecheck
+npm run lint
+```
 
 ## License
 
